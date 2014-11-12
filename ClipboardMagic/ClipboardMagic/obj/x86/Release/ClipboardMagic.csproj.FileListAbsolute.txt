@@ -1,0 +1,12 @@
+D:\C#\ClipboardMagic\ClipboardMagic\ClipboardMagic\bin\Release\ClipboardMagic.exe
+D:\C#\ClipboardMagic\ClipboardMagic\ClipboardMagic\bin\Release\ClipboardMagic.pdb
+D:\C#\ClipboardMagic\ClipboardMagic\ClipboardMagic\obj\x86\Release\ResolveAssemblyReference.cache
+D:\C#\ClipboardMagic\ClipboardMagic\ClipboardMagic\obj\x86\Release\ClipboardMagic.Form1.resources
+D:\C#\ClipboardMagic\ClipboardMagic\ClipboardMagic\obj\x86\Release\ClipboardMagic.popup.resources
+D:\C#\ClipboardMagic\ClipboardMagic\ClipboardMagic\obj\x86\Release\ClipboardMagic.Properties.Resources.resources
+D:\C#\ClipboardMagic\ClipboardMagic\ClipboardMagic\obj\x86\Release\GenerateResource.read.1.tlog
+D:\C#\ClipboardMagic\ClipboardMagic\ClipboardMagic\obj\x86\Release\GenerateResource.write.1.tlog
+D:\C#\ClipboardMagic\ClipboardMagic\ClipboardMagic\obj\x86\Release\ClipboardMagic.exe
+D:\C#\ClipboardMagic\ClipboardMagic\ClipboardMagic\obj\x86\Release\ClipboardMagic.pdb
+D:\C#\ClipboardMagic\ClipboardMagic\ClipboardMagic\bin\Release\InputSimulator.dll
+D:\C#\ClipboardMagic\ClipboardMagic\ClipboardMagic\bin\Release\ClipboardMagic.exe.config
