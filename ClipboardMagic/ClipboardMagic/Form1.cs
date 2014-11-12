@@ -60,8 +60,6 @@ namespace ClipboardMagic
             
             InitializeComponent();
             SetHook();
-            
-            
         }
 
         private void SetHook()
@@ -90,11 +88,11 @@ namespace ClipboardMagic
             //If the clipsboard is open and a user presses a key we handle that here.
             if (wParam == (IntPtr)WM_KEYUP &&  isPopperOpen == true)
             {
-                //MessageBox.Show("See it : " + Key.ToString());
+                MessageBox.Show("See it : " + Key.ToString());
 
                 //Clipboard.SetText(ClipsBoard.printClip(Key.ToString()));
                 
-                Clipboard.SetText(ClipsBoard.printClip("1"));
+                //Clipboard.SetText(ClipsBoard.printClip("1"));
                 //((popup)Application.OpenForms["popper1"]).Close();
                 string id = "popper1";
                 foreach (Form f in Application.OpenForms)
@@ -113,9 +111,9 @@ namespace ClipboardMagic
             if (nCode >= 0 && wParam == (IntPtr)WM_KEYUP && hookStruct.vkCode == 0x43 && ctrlDown)
             {
 
-                //Clipboard.SetText("Are your base, are belone to us!");
+                /*Clipboard.SetText("Are your base, are belone to us!");
                 
-                /*if (Clipboard.ContainsText(TextDataFormat.Rtf))
+                if (Clipboard.ContainsText(TextDataFormat.Rtf))
                 {
                     MessageBox.Show("RTF!!");
                 }*/
@@ -133,12 +131,15 @@ namespace ClipboardMagic
                 //Starts the timmer that check for the release of the CTRL button
                 //checkbtnup.Start();
 
+                //MessageBox.Show("V is the key!");
+
                 popup popper = new popup(ClipsBoard,this);
                 popper.Name = "popper1";
-                popper.Show();
+                popper.ShowDialog();
                 popper.BringToFront();
 
-                return -1;
+               
+                return 0;
             }
             else
             {
@@ -146,6 +147,8 @@ namespace ClipboardMagic
                 return CallNextHookEx(_hookHandle, nCode, wParam, lParam);
             }
         }
+
+
 
         public void runPaste()
         {
@@ -168,7 +171,7 @@ namespace ClipboardMagic
 
             if (text.ToString() != " ")
             {
-                //MessageBox.Show("Copy: " + text);
+                MessageBox.Show("Copy: " + text);
                 int complete = ClipsBoard.addClip(text);
                 if (ClipsBoard.addClip(text) != 0)
                 {
@@ -178,7 +181,7 @@ namespace ClipboardMagic
             else { MessageBox.Show("It was blank"); } 
         }
 
-        private static int KbHookProc2(int nCode, IntPtr wParam, IntPtr lParam)
+        /*private static int KbHookProc2(int nCode, IntPtr wParam, IntPtr lParam)
         {
             //MessageBox.Show(lParam.ToString());
             if (nCode >= 0 && wParam == (IntPtr)WM_KEYDOWN)
@@ -200,8 +203,8 @@ namespace ClipboardMagic
                     //popper.Show();
                     //popper.BringToFront();
 
-
-                    InputSimulator.SimulateKeyPress(VirtualKeyCode.VK_O);
+                    MessageBox.Show("used to pess stuff here");
+                    //InputSimulator.SimulateKeyPress(VirtualKeyCode.VK_O);
 
 
                     //SendKeys.SendWait("{HELLO!}");
@@ -211,10 +214,10 @@ namespace ClipboardMagic
                 }
 
             }
-
+       
             // Pass to other keyboard handlers. Makes the Ctrl+V pass through.
             return CallNextHookEx(_hookHandle, nCode, wParam, lParam);
-        }
+        } */
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -233,7 +236,7 @@ namespace ClipboardMagic
             this.Hide();
         }
 
-        private void checkbtnup_Tick(object sender, EventArgs e)
+        /*private void checkbtnup_Tick(object sender, EventArgs e)
         {
             bool ctrlDown = GetKeyState(VK_LCONTROL) < 0 || GetKeyState(VK_RCONTROL) < 0;
 
@@ -247,7 +250,7 @@ namespace ClipboardMagic
                 InputSimulator.SimulateTextEntry("This is a line of text that I paste automatically from within the C# program.");
             checkbtnup.Stop();
             }
-        }
+        }*/
 
 
         //Declare the wrapper managed MouseHookStruct class.

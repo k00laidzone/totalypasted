@@ -69,7 +69,7 @@
             // checkbtnup
             // 
             this.checkbtnup.Interval = 200;
-            this.checkbtnup.Tick += new System.EventHandler(this.checkbtnup_Tick);
+            //this.checkbtnup.Tick += new System.EventHandler(this.checkbtnup_Tick);
             // 
             // Form1
             // 

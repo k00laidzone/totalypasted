@@ -44,8 +44,9 @@ namespace ClipboardMagic
 
         private void popup_KeyDown(object sender, KeyEventArgs e)
         {
-            e.Handled = true;
-            //MessageBox.Show("test");
+            MessageBox.Show("Key down activated: " + sender.ToString());
+            //e.Handled = true;
+            
             
         }
 
@@ -63,7 +64,7 @@ namespace ClipboardMagic
 
         private void popup_Load(object sender, EventArgs e)
         {
-
+            //MessageBox.Show("Loading ");
             int i = 1;
             Dictionary<string, string> _clipDict = _clipboard.returnClips();
             clipz.AutoSize = true;
@@ -254,6 +255,7 @@ namespace ClipboardMagic
 
         public void closer(object sender, EventArgs e)
         {
+            MessageBox.Show("Closing on purpos ");
             _mainForm.resetPaste();
             this.Close();
         }
