@@ -67,6 +67,12 @@ namespace ClipboardMagic
             _hookHandle = SetWindowsHookEx( WH_KEYBOARD_LL, KbHookProc, (IntPtr)0, 0);
         }
 
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }  
+
         private int KbHookProc(int nCode, IntPtr wParam, IntPtr lParam)
         {
 
@@ -87,22 +93,18 @@ namespace ClipboardMagic
             //If the clipsboard is open and a user presses a key we handle that here.
             if (wParam == (IntPtr)WM_KEYUP &&  isPopperOpen == true)
             {
-                MessageBox.Show("See it : " + Key.ToString());
+                string KeyStruck = Key.ToString();
 
-                //Clipboard.SetText(ClipsBoard.printClip(Key.ToString()));
-                
-                //Clipboard.SetText(ClipsBoard.printClip("1"));
-                //((popup)Application.OpenForms["popper1"]).Close();
-                /*string id = "popper1";
-                foreach (Form f in Application.OpenForms)
-                    
-                    if (Convert.ToString(id) == f.Name)
-                    {
-                        f.Close();
-                        break;
+                //MessageBox.Show("See it : " + KeyStruck);
 
-                    }*/
-                //runPaste();
+                if (KeyStruck == "1" || KeyStruck == "2" || KeyStruck == "3")
+                {
+                    Clipboard.SetText(ClipsBoard.printClip(KeyStruck));
+                    ((popup)Application.OpenForms["popper1"]).Close();
+                    Dispose();
+                    runPaste();
+
+                }
 
             }
 
@@ -168,8 +170,8 @@ namespace ClipboardMagic
 
             if (text.ToString() != " ")
             {
-                MessageBox.Show("Copy: " + text);
-                int complete = ClipsBoard.addClip(text);
+                //MessageBox.Show("Copy: " + text);
+                //int complete = ClipsBoard.addClip(text);
                 if (ClipsBoard.addClip(text) != 0)
                 {
                     MessageBox.Show("There was an error");

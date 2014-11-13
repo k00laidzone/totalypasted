@@ -44,8 +44,8 @@ namespace ClipboardMagic
 
         private void popup_KeyDown(object sender, KeyEventArgs e)
         {
-            MessageBox.Show("Key down activated: " + sender.ToString());
-            //e.Handled = true;
+           //MessageBox.Show("Key down activated: " + sender.ToString());
+           //e.Handled = true;
             
             
         }
@@ -255,7 +255,7 @@ namespace ClipboardMagic
 
         public void closer(object sender, EventArgs e)
         {
-            MessageBox.Show("Closing on purpos ");
+            //MessageBox.Show("Closing on purpos ");
             _mainForm.resetPaste();
             this.Close();
         }
@@ -324,6 +324,17 @@ namespace ClipboardMagic
             //MessageBox.Show(name);
         }
 
-
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
     }
 }
