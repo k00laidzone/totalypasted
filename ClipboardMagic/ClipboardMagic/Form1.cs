@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using WindowsInput;
+using System.Threading;
 
 
 namespace ClipboardMagic
@@ -52,12 +53,10 @@ namespace ClipboardMagic
         [DllImport("user32.dll")]
         private static extern IntPtr SendMessage(IntPtr hWnd, uint Msg, IntPtr wParam, IntPtr lParam); 
         private const uint WM_COMMAND = 0x0111;
-
         private static bool isPopupReady = true;
 
         public Form1()
-        {
-            
+        {            
             InitializeComponent();
             SetHook();
         }
@@ -94,7 +93,7 @@ namespace ClipboardMagic
                 
                 //Clipboard.SetText(ClipsBoard.printClip("1"));
                 //((popup)Application.OpenForms["popper1"]).Close();
-                string id = "popper1";
+                /*string id = "popper1";
                 foreach (Form f in Application.OpenForms)
                     
                     if (Convert.ToString(id) == f.Name)
@@ -102,8 +101,8 @@ namespace ClipboardMagic
                         f.Close();
                         break;
 
-                    }
-                runPaste();
+                    }*/
+                //runPaste();
 
             }
 
@@ -132,14 +131,12 @@ namespace ClipboardMagic
                 //checkbtnup.Start();
 
                 //MessageBox.Show("V is the key!");
-
                 popup popper = new popup(ClipsBoard,this);
                 popper.Name = "popper1";
-                popper.ShowDialog();
+                popper.Show();
                 popper.BringToFront();
-
-               
-                return 0;
+                
+                return -1;
             }
             else
             {
@@ -181,9 +178,10 @@ namespace ClipboardMagic
             else { MessageBox.Show("It was blank"); } 
         }
 
-        /*private static int KbHookProc2(int nCode, IntPtr wParam, IntPtr lParam)
+        /*
+         * private static int KbHookProc2(int nCode, IntPtr wParam, IntPtr lParam)
         {
-            //MessageBox.Show(lParam.ToString());
+            MessageBox.Show(lParam.ToString());
             if (nCode >= 0 && wParam == (IntPtr)WM_KEYDOWN)
             {
                 var hookStruct = (KbLLHookStruct)Marshal.PtrToStructure(lParam, typeof(KbLLHookStruct));
@@ -236,7 +234,8 @@ namespace ClipboardMagic
             this.Hide();
         }
 
-        /*private void checkbtnup_Tick(object sender, EventArgs e)
+        /*
+         * private void checkbtnup_Tick(object sender, EventArgs e)
         {
             bool ctrlDown = GetKeyState(VK_LCONTROL) < 0 || GetKeyState(VK_RCONTROL) < 0;
 

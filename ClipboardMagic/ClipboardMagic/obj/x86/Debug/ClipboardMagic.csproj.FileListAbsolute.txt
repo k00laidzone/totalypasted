@@ -43,3 +43,14 @@ C:\Users\Shawn\Desktop\ClipboardMagic\ClipboardMagic\ClipboardMagic\obj\x86\Debu
 \\vmware-host\Shared Folders\Documents\totalypasted\ClipboardMagic\ClipboardMagic\obj\x86\Debug\ClipboardMagic.popup.resources
 \\vmware-host\Shared Folders\Documents\totalypasted\ClipboardMagic\ClipboardMagic\obj\x86\Debug\ClipboardMagic.Properties.Resources.resources
 \\vmware-host\Shared Folders\Documents\totalypasted\ClipboardMagic\ClipboardMagic\obj\x86\Debug\ClipboardMagic.csproj.GenerateResource.Cache
+D:\Softdev\totalypasted\ClipboardMagic\ClipboardMagic\bin\Debug\ClipboardMagic.exe.config
+D:\Softdev\totalypasted\ClipboardMagic\ClipboardMagic\obj\x86\Debug\ClipboardMagic.exe
+D:\Softdev\totalypasted\ClipboardMagic\ClipboardMagic\obj\x86\Debug\ClipboardMagic.pdb
+D:\Softdev\totalypasted\ClipboardMagic\ClipboardMagic\bin\Debug\ClipboardMagic.exe
+D:\Softdev\totalypasted\ClipboardMagic\ClipboardMagic\bin\Debug\ClipboardMagic.pdb
+D:\Softdev\totalypasted\ClipboardMagic\ClipboardMagic\bin\Debug\InputSimulator.dll
+D:\Softdev\totalypasted\ClipboardMagic\ClipboardMagic\obj\x86\Debug\ClipboardMagic.csprojResolveAssemblyReference.cache
+D:\Softdev\totalypasted\ClipboardMagic\ClipboardMagic\obj\x86\Debug\ClipboardMagic.Form1.resources
+D:\Softdev\totalypasted\ClipboardMagic\ClipboardMagic\obj\x86\Debug\ClipboardMagic.popup.resources
+D:\Softdev\totalypasted\ClipboardMagic\ClipboardMagic\obj\x86\Debug\ClipboardMagic.Properties.Resources.resources
+D:\Softdev\totalypasted\ClipboardMagic\ClipboardMagic\obj\x86\Debug\ClipboardMagic.csproj.GenerateResource.Cache
